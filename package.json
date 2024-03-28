@@ -6,11 +6,29 @@
     "start": "next start"
   },
   "dependencies": {
+    "@splidejs/react-splide": "^0.7.12",
+    "aos": "^2.3.4",
+    "axios": "^1.6.7",
+    "bootstrap-icons": "^1.11.3",
+    "date-fns": "^3.3.1",
+    "gray-matter": "^4.0.3",
+    "js-cookie": "^3.0.5",
     "next": "latest",
+    "next-seo": "^6.5.0",
+    "next-sitemap": "^4.2.3",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^5.0.1",
+    "react-loader-spinner": "^6.1.6",
+    "react-router-dom": "^6.22.3",
+    "react-toastify": "^10.0.4",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1"
   },
   "engines": {
     "node": ">=18"
+  },
+  "devDependencies": {
+    "sass": "^1.71.1"
   }
 }
