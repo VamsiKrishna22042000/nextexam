@@ -67,6 +67,26 @@ const Quiz = () => {
     sendCookieToIframe();
   });
 
+  // Function to access DOM elements inside the iframe
+  const accessIframeDOM = () => {
+    const iframe = document.getElementById("iframeid");
+    if (iframe) {
+      const iframeDocument =
+        iframe.contentDocument || iframe.contentWindow.document;
+      console.log(iframeDocument);
+      if (iframeDocument) {
+        const buttonInsideIframe =
+          iframeDocument.getElementById("passdatafornxt");
+        if (buttonInsideIframe) {
+          // Now you can manipulate the button inside the iframe
+          buttonInsideIframe.style.backgroundColor = "red";
+        }
+      }
+    }
+  };
+
+  // Call the function to access iframe DOM when component mounts
+
   return (
     <div
       style={{
@@ -75,6 +95,9 @@ const Quiz = () => {
         marginTop: "7%",
       }}
     >
+      <button onClick={accessIframeDOM} type="button">
+        click
+      </button>
       <iframe
         id="iframeid"
         style={{ height: "100%", width: "100%" }}
