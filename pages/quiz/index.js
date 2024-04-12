@@ -1,10 +1,7 @@
 import { useEffect } from "react";
 import Cookies from "js-cookie";
-import { useRouter } from "next/router";
 
 const Quiz = () => {
-  const router = useRouter();
-
   useEffect(() => {
     const receiveMessage = (event) => {
       // Ensure that the message is coming from a trusted source
@@ -31,8 +28,6 @@ const Quiz = () => {
           expires: 7,
           domain: ".vercel.app",
         });
-        // Optionally, you can also navigate or perform other actions in your Next.js app
-        router.push("/");
       }
     };
     // Add an event listener to listen for messages from the iframe
