@@ -5,7 +5,7 @@ const Quiz = () => {
   useEffect(() => {
     const receiveMessage = (event) => {
       // Ensure that the message is coming from a trusted source
-      if (event.origin !== "https://exam-userside.vercel.app") return;
+      if (event.origin !== "https://exam-userside.vercel.app/") return;
       // Check the message type
       if (event.data.type === "login") {
         // Access the data sent from the iframe
