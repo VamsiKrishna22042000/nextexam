@@ -14,7 +14,7 @@ const Quiz = () => {
         // Do something with the received data, for example, set cookies in the Next.js app
         Cookies.set("jwt_userID", jwt_userID, {
           expires: 7,
-          domain: "exam-userside.vercel.app",
+          domain: ".vercel.app",
         });
         Cookies.set("jwt_userID", jwt_userID, {
           expires: 7,
@@ -22,7 +22,7 @@ const Quiz = () => {
         });
         Cookies.set("userToken", userToken, {
           expires: 7,
-          domain: "exam-userside.vercel.app",
+          domain: ".vercel.app",
         });
         Cookies.set("userToken", userToken, {
           expires: 7,
@@ -30,7 +30,7 @@ const Quiz = () => {
         });
         Cookies.set("jwt_firstName", jwt_firstName, {
           expires: 7,
-          domain: "exam-userside.vercel.app",
+          domain: ".vercel.app",
         });
         Cookies.set("jwt_firstName", jwt_firstName, {
           expires: 7,
@@ -38,7 +38,7 @@ const Quiz = () => {
         });
         Cookies.set("jwt_lastName", jwt_lastName, {
           expires: 7,
-          domain: "exam-userside.vercel.app",
+          domain: ".vercel.app",
         });
         Cookies.set("jwt_lastName", jwt_lastName, {
           expires: 7,
