@@ -18,7 +18,7 @@ export default function Document() {
           crossOrigin="anonymous"
         />
       </Head>
-      <body>
+      <body style={{ overflowX: "hidden" }}>
         <Main />
         <NextScript />
       </body>

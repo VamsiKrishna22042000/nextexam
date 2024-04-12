@@ -8,11 +8,11 @@ const Navigation = () => {
         <li className="dropdown">
           <Link href="/category/syllabus" passHref>
             <div>
-            <span>Syllabus</span>
-            <i className="bi bi-chevron-down dropdown-indicator"></i>
+              <span>Syllabus</span>
+              <i className="bi bi-chevron-down dropdown-indicator"></i>
             </div>
           </Link>
-          
+
           <ul>
             <li>
               <Link href="/blog/jpsc-prelims-syllabus">Prelims</Link>
@@ -28,11 +28,11 @@ const Navigation = () => {
         <li className="dropdown">
           <Link href="/category/prelims" passHref>
             <div>
-            <span>Prelims</span>
-            <i className="bi bi-chevron-down dropdown-indicator"></i>
+              <span>Prelims</span>
+              <i className="bi bi-chevron-down dropdown-indicator"></i>
             </div>
           </Link>
-          
+
           <ul>
             <li>
               <Link href="/category/history">History</Link>
@@ -57,10 +57,11 @@ const Navigation = () => {
         <li className="dropdown">
           <Link href="/category/mains" passHref>
             <div>
-            <span>Mains</span><i className="bi bi-chevron-down dropdown-indicator"></i>
+              <span>Mains</span>
+              <i className="bi bi-chevron-down dropdown-indicator"></i>
             </div>
           </Link>
-          
+
           <ul>
             <li>
               <a href="#">Paper III (History & Geography)</a>
@@ -87,6 +88,9 @@ const Navigation = () => {
         </li>
         <li>
           <Link href="/about">About Us</Link>
+        </li>
+        <li>
+          <Link href="/quiz">Quiz</Link>
         </li>
       </ul>
     </nav>
