@@ -5,7 +5,7 @@ const Quiz = () => {
   useEffect(() => {
     const receiveMessage = (event) => {
       // Ensure that the message is coming from a trusted source
-      if (event.origin !== "https://exam-userside.vercel.app/") return;
+      if (event.origin !== "https://exam-userside.vercel.app") return;
       // Check the message type
       if (event.data.type === "login") {
         // Access the data sent from the iframe
@@ -14,19 +14,35 @@ const Quiz = () => {
         // Do something with the received data, for example, set cookies in the Next.js app
         Cookies.set("jwt_userID", jwt_userID, {
           expires: 7,
-          domain: ".vercel.app",
+          domain: "exam-userside.vercel.app",
+        });
+        Cookies.set("jwt_userID", jwt_userID, {
+          expires: 7,
+          domain: "nextexam.vercel.app",
         });
         Cookies.set("userToken", userToken, {
           expires: 7,
-          domain: ".vercel.app",
+          domain: "exam-userside.vercel.app",
+        });
+        Cookies.set("userToken", userToken, {
+          expires: 7,
+          domain: "nextexam.vercel.app",
         });
         Cookies.set("jwt_firstName", jwt_firstName, {
           expires: 7,
-          domain: ".vercel.app",
+          domain: "exam-userside.vercel.app",
+        });
+        Cookies.set("jwt_firstName", jwt_firstName, {
+          expires: 7,
+          domain: "nextexam.vercel.app",
         });
         Cookies.set("jwt_lastName", jwt_lastName, {
           expires: 7,
-          domain: ".vercel.app",
+          domain: "exam-userside.vercel.app",
+        });
+        Cookies.set("jwt_lastName", jwt_lastName, {
+          expires: 7,
+          domain: "nextexam.vercel.app",
         });
       }
     };
@@ -51,7 +67,7 @@ const Quiz = () => {
         allow="true"
         allowTransparency={true}
         allowFullScreen={true}
-        src="https://exam-userside.vercel.app/"
+        src="https://exam-userside.vercel.app"
         security="false"
         sandbox="allow-same-origin allow-scripts"
       />
