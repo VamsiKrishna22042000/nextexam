@@ -5,7 +5,7 @@ const Quiz = () => {
   useEffect(() => {
     const receiveMessage = (event) => {
       // Ensure that the message is coming from a trusted source
-      if (event.origin !== "https://exam-userside.vercel.app") return;
+      if (event.origin !== "https://exam-userside.vercel.app/") return;
       // Check the message type
       if (event.data.type === "login") {
         // Access the data sent from the iframe
@@ -56,7 +56,7 @@ const Quiz = () => {
   useEffect(() => {
     // Function to send cookie data to the iframe
     const sendCookieToIframe = () => {
-      const iframe = document.getElementById("your-iframe-id");
+      const iframe = document.getElementById("iframeid");
       const cookieValue = document.cookie; // Assuming you want to send all cookies
       iframe.contentWindow.postMessage(
         { type: "cookie", value: cookieValue },
@@ -76,11 +76,12 @@ const Quiz = () => {
       }}
     >
       <iframe
+        id="iframeid"
         style={{ height: "100%", width: "100%" }}
         allow="true"
         allowTransparency={true}
         allowFullScreen={true}
-        src="https://exam-userside.vercel.app"
+        src="https://exam-userside.vercel.app/"
         security="false"
         sandbox="allow-same-origin allow-scripts"
       />
