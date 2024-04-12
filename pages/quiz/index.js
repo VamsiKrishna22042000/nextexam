@@ -52,7 +52,20 @@ const Quiz = () => {
     return () => {
       window.removeEventListener("message", receiveMessage);
     };
-  }, []);
+  });
+  useEffect(() => {
+    // Function to send cookie data to the iframe
+    const sendCookieToIframe = () => {
+      const iframe = document.getElementById("your-iframe-id");
+      const cookieValue = document.cookie; // Assuming you want to send all cookies
+      iframe.contentWindow.postMessage(
+        { type: "cookie", value: cookieValue },
+        "https://nextexam.vercel.app/"
+      );
+    };
+    // Send cookie data to the iframe when component mounts
+    sendCookieToIframe();
+  });
 
   return (
     <div
